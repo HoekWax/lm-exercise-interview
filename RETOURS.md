@@ -5,7 +5,9 @@ Dans les consignes
 
 # Changer la version de vite vers 6.4.1
 
+Sinon "npm install" crash.
+
 # Ne pas utiliser IonReactHashRouter ?
 
-dev:web considère que c'est electron quand même, étrangement.
-Le hash router ne fonctionne pas dans tous les cas
+Quand on run "dev:web", isElectron() est à true malgré tout, étrange ?
+Le hash router ne fonctionne pas dans tous les cas.
