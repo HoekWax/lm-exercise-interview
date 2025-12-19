@@ -1,0 +1,45 @@
+.platform-info {
+	border-radius: 16px;
+	overflow: hidden;
+	--box-shadow: none;
+	box-shadow: none;
+}
+
+.platform-info__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.platform-info__title {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.platform-info__title ion-icon {
+	font-size: 18px;
+	opacity: 0.9;
+}
+
+.platform-info__kv {
+	display: grid;
+	gap: 2px;
+}
+
+.platform-info__k {
+	font-size: 12px;
+	opacity: 0.7;
+}
+
+.platform-info__v {
+	font-size: 14px;
+	font-weight: 600;
+	word-break: break-word;
+}
+
+.platform-info__model {
+	margin-top: 10px;
+	opacity: 0.85;
+}

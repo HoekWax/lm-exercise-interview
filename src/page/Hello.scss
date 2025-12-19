@@ -1,0 +1,91 @@
+.hello-page {
+	/* Fond gris clair pour la page */
+	--background: #f2f3f5;
+}
+
+/* Assure l’application du fond sur IonContent */
+.hello-page ion-content {
+	--background: #f2f3f5;
+}
+
+.hello-card {
+	margin-top: 8px;
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+}
+
+.hello-card__header {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.hello-card__avatar {
+	width: 44px;
+	height: 44px;
+	background: rgba(var(--ion-color-primary-rgb), 0.12);
+	border: 1px solid rgba(var(--ion-color-primary-rgb), 0.18);
+}
+
+.hello-card__meta {
+	display: grid;
+	gap: 2px;
+	min-width: 0;
+}
+
+.hello-card__blurb {
+	margin: 0 0 12px 0;
+	line-height: 1.35;
+}
+
+.hello-card__list {
+	--background: rgba(var(--ion-color-step-50-rgb, 255, 255, 255), 0.6);
+	backdrop-filter: blur(10px);
+}
+
+.hello-kv {
+	display: grid;
+	gap: 2px;
+}
+
+.hello-kv__k {
+	font-size: 12px;
+	opacity: 0.7;
+}
+
+.hello-kv__v {
+	font-size: 14px;
+	font-weight: 600;
+	word-break: break-word;
+}
+
+.hello-section {
+	margin-top: 14px;
+}
+
+.hello-section__title {
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	opacity: 0.75;
+	margin-bottom: 8px;
+}
+
+.hello-chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.hello-muted {
+	margin-top: 8px;
+	font-size: 12px;
+	opacity: 0.7;
+}
+
+.hello-pref {
+	--inner-padding-end: 0;
+	--padding-start: 0;
+}

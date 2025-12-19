@@ -1,6 +1,8 @@
 describe("My First Test", () => {
   it("Visits the app root url", () => {
     cy.visit("/");
-    cy.contains("Hello Home");
+    // Redirects to /home and shows the main CTA
+    cy.url().should("include", "/home");
+    cy.contains("Hello").should("be.visible");
   });
 });

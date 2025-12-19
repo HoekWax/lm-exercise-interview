@@ -1,5 +1,5 @@
 import { IonApp, IonRouterOutlet, setupIonicReact } from "@ionic/react";
-import { IonReactHashRouter, IonReactRouter } from "@ionic/react-router";
+import { IonReactRouter } from "@ionic/react-router";
 import { Redirect, Route } from "react-router-dom";
 
 /* Core CSS required for Ionic components to work properly */
@@ -31,28 +31,31 @@ import "@ionic/react/css/text-transformation.css";
 
 /* Theme variables */
 import type { ComponentType } from "react";
+import { Hello } from "./page/Hello";
 import { Home } from "./page/Home";
 import "./theme/variables.css";
-import { isElectron } from "./utils/platform";
 
 setupIonicReact({ mode: "md", animated: false });
-const Router: ComponentType = isElectron()
-  ? IonReactHashRouter
-  : IonReactRouter;
+// IonReactHashRouter is not good even with electron for some reason. Also the command dev:web is it detected as electron
+// We use only IonReactRouter for now
+const Router: ComponentType = IonReactRouter;
 
 export const App = () => {
-  return (
-    <IonApp>
-      <Router>
-        <IonRouterOutlet>
-          <Route exact path="/home">
-            <Home />
-          </Route>
-          <Route exact path="/">
-            <Redirect to="/home" />
-          </Route>
-        </IonRouterOutlet>
-      </Router>
-    </IonApp>
-  );
+	return (
+		<IonApp>
+			<Router>
+				<IonRouterOutlet>
+					<Route exact path="/home">
+						<Home />
+					</Route>
+					<Route path="/hello">
+						<Hello />
+					</Route>
+					<Route exact path="/">
+						<Redirect to="/home" />
+					</Route>
+				</IonRouterOutlet>
+			</Router>
+		</IonApp>
+	);
 };
